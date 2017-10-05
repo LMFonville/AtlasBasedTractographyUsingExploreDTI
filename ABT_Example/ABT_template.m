@@ -43,9 +43,8 @@ end
 params.segm_only = 0; %change to value 1 if you want to segment the streamlines
 params.T_Length_range(1) = 0; %min length of streamlines to be included
 params.T_Length_range(2) = Inf; %max length
-params.Temp_fol = 'D:\ExploreDTI 4.8.3\Source\Temp'; %changing this to a different folder doesn't seem to actually do anything
-%keep this in mind when running the script; you can't run multiple
-%instances at once since the same folder is used! 
+params.Temp_fol = 'path/to/ExploreDTI/Source/Temp'; %changing this to a different folder doesn't seem to actually do anything
+%keep this in mind when running the script; you can't run multiple instances at once since the same folder is used! 
 %A quick workaround (for now) is to have multiple copies of ExploreDTI to run.
 
 %Run the damn thing
