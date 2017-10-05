@@ -1,7 +1,7 @@
 %This is a small example script to set up the necessary parameters to run atlas-based tractography in ExploreDTI without 
 %requiring use of the GUI.
-%To run the script as is, make sure you have the example data from ExploreDTI (http://www.exploredti.com/exampledataset.htm)
-%have carried out whole brain tractography so you have a tracts file, exported an FA map to nifti format from the data and have
+%To run the script as is, make sure you have the example data from ExploreDTI (http://www.exploredti.com/exampledataset.htm),
+%have carried out whole brain tractography so you have a tracts file, exported an FA map to nifti format from the data, and have
 %one or more ROIs in nifti format. 
 
 %Make sure you add ExploreDTI and its subfolders to the Matlab path
