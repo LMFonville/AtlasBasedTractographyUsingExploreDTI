@@ -17,7 +17,7 @@ ABT_output = [DTI_folder filesep 'ABT_output']; %make sure to create this direct
 DTIfiles = E_DTI_Get_files_from_folder(DTI_folder);
 DTI = E_DTI_Get_DTI_files(DTIfiles);
 tract = E_DTI_Get_tract_files(DTIfiles);
-nifti_logical_idx = ~cellfun(@isempty,strfind(DTIfiles,'FA.nii'));
+nifti_logical_idx = ~cellfun(@isempty,strfind(DTIfiles,'FA.nii')); %find the file ending in FA.nii
 nifti_idx = find(nifti_logical_idx == 1);
 FA_template = DTIfiles(nifti_idx);
 
