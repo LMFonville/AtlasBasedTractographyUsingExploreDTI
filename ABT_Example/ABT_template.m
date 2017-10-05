@@ -8,11 +8,10 @@
 %Make sure you add ExploreDTI and its subfolders to the Matlab path
 addpath(genpath('path/to/exploreDTI'));
 
-%Define the folders your files are in, I keep my ROI files and the output
-%in separate folders.
+%Define the folders your files are in, I keep my ROI files and the output in separate folders.
 DTI_folder = 'path/to/ABT_example';
 ROI_folder = [DTI_folder filesep 'IFOF'];
-ABT_output = [DTI_folder filesep 'ABT_output'];
+ABT_output = [DTI_folder filesep 'ABT_output']; %make sure to create this directory or change where you want the output to go
 
 %Specify the DTI files
 DTIfiles = E_DTI_Get_files_from_folder(DTI_folder);
@@ -24,7 +23,7 @@ FA_template = DTIfiles(nifti_idx);
 
 %Specify the ROI files
 ROIfiles = E_DTI_Get_files_from_folder(ROI_folder);
-roi_logical_idx = ~cellfun(@isempty,strfind(ROIfiles,'nii'));
+roi_logical_idx = ~cellfun(@isempty,strfind(ROIfiles,'nii')); %only want the nifti files in the folder
 roi_idx = find(roi_logical_idx == 1);
 ROIs = ROIfiles(roi_idx);
      
